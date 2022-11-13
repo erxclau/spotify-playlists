@@ -1,0 +1,7 @@
+venv
+secret.json
+data/raw_api_data.json
+
+node_modules
+.vite
+dist

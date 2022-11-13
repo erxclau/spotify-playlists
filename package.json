@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "d3": "^7.6.1",
+    "vite": "^3.2.3"
+  },
+  "devDependencies": {
+    "sink": "michigandaily/sink"
+  },
+  "name": "spotify-playlists",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "erxclau <ericlau41802@gmail.com>",
+  "license": "MIT"
+}

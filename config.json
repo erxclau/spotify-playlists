@@ -1,0 +1,6 @@
+{
+  "deployment": {
+    "url": "https://erxclau.github.io/spotify-playlists",
+    "build": "./dist"
+  }
+}
