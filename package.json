@@ -6,6 +6,9 @@
   "devDependencies": {
     "sink": "michigandaily/sink"
   },
+  "scripts": {
+    "build": "vite build"
+  },
   "name": "spotify-playlists",
   "version": "1.0.0",
   "main": "index.js",
