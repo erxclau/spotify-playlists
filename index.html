@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A timeline of my Spotify playlists</title>
+    <style>
+      :root {
+        --spotify-green: rgb(15, 215, 105);
+        --dark-gray: rgb(24, 24, 24);
+        --light-gray: rgb(179, 179, 179);
+
+        --font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+        --aside-width: 300px;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: var(--font);
+        font-size: 16px;
+        background-color: var(--dark-gray);
+        width: 4000px;
+        padding-right: calc(var(--aside-width) + 50px);
+      }
+
+      header {
+        position: sticky;
+        left: 0;
+        width: fit-content;
+        margin: 0;
+      }
+
+      h1 {
+        text-decoration: underline;
+        text-decoration-color: var(--spotify-green);
+        text-underline-offset: 0.5rem;
+        max-width: 100vw;
+      }
+
+      h1,
+      small,
+      p {
+        color: white;
+        margin: 1rem;
+      }
+
+      .domain,
+      .tick line {
+        stroke: var(--light-gray);
+      }
+
+      .tick text {
+        font-size: 12px;
+        font-family: var(--font);
+        fill: white;
+      }
+
+      aside {
+        position: fixed;
+        background-color: black;
+        width: var(--aside-width);
+        height: 100vh;
+        box-sizing: border-box;
+        right: 0;
+        top: 0;
+        padding: 0.5rem;
+        color: var(--light-gray);
+        overflow: scroll;
+      }
+
+      .track {
+        font-size: 14px;
+        display: flex;
+        gap: 0.5rem;
+        padding: 0.25rem;
+      }
+
+      .track:not(:last-of-type) {
+        margin-bottom: 0.5rem;
+      }
+    </style>
+    <script type="module" crossorigin src="/spotify-playlists/assets/index.511e3497.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1 style="margin-bottom: 0.5rem">A timeline of my Spotify playlists</h1>
+      <small><b>by Eric Lau</b></small>
+      <p
+        style="color: white; max-width: calc(100vw - calc(var(--aside-width) + 50px)); margin-top: 0.5rem"
+      >
+        Spotify calculates various attributes of a song such as <i>liveness</i>,
+        <i>danceability</i> and <i>energy</i>. One of the attributes is called
+        <b>valence</b>, which is associated with how happy a song sounds. The
+        following is a timeline of all of the playlists I've made, positioned by
+        the average valence of the songs in the playlist.
+        <b
+          >A <span id="valence-of-one">valence of 1</span> is very happy whereas
+          a <span id="valence-of-zero">valence of 0</span> is very sad.</b
+        >
+      </p>
+    </header>
+    <figure>
+      <svg></svg>
+    </figure>
+    <aside>
+      <header style="color: white">
+        <b>Hover over a playlist cover to see more information about each song.</b>
+      </header>
+      <div id="valence"></div>
+      <div id="tracks"></div>
+    </aside>
+    
+  </body>
+</html>
